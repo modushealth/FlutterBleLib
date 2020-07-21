@@ -25,7 +25,7 @@ mixin DeviceConnectionMixin on FlutterBLE {
 
   Stream<PeripheralConnectionState> observePeripheralConnectionState(
       String identifier, bool emitCurrentValue) {
-    var controller = StreamController<String>(
+    var controller = StreamController<dynamic>(
       onListen: () => _methodChannel.invokeMethod(
         MethodName.observeConnectionState,
         <String, dynamic>{
