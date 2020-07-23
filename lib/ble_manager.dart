@@ -39,6 +39,8 @@ abstract class BleManager {
     return _instance;
   }
 
+  InternalBleManager get internalManager;
+
   /// Cancels transaction's return, resulting in [BleError] with
   /// [BleError.errorCode] set to [BleErrorCode.operationCancelled] being returned
   /// from transaction's Future.

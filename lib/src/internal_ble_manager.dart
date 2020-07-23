@@ -15,6 +15,11 @@ class InternalBleManager
   }
 
   @override
+  InternalBleManager get internalManager {
+    return _bleLib._manager;
+  }
+
+  @override
   Future<void> createClient({
     String restoreStateIdentifier,
     RestoreStateAction restoreStateAction,
